@@ -16,7 +16,7 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 from django.conf.urls import include
-from empresaapp.views import agenda, avaliacao, status,empresa,servico
+from empresaapp.views import agenda, avaliacao, status,empresa,servico,cad_servico
 
 urlpatterns = [
     path('admin/', admin.site.urls),
@@ -25,5 +25,6 @@ urlpatterns = [
     path('status/', status, name='status'),
     path('empresa/', empresa, name='empresa'),
     path('servico/', servico, name='servico'),
+    path('cad_servico/', cad_servico, name='cad_servico'),
     path('', include('usuarios.urls')),
 ]

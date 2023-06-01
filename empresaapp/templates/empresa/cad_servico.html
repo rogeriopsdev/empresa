@@ -1,0 +1,11 @@
+{%  extends 'empresa/base.html' %}
+
+
+{% block conteudo %}
+<h1 class="bg-dark text-light">Olá aqui é será o cadastro de empresa!</h1>
+    <form method="POST" enctype="multipart/form-data">
+    {{ form }}
+        <input type="submit" value="Salvar" class=" btn btn-success">
+    </form>
+
+{% endblock conteudo %}

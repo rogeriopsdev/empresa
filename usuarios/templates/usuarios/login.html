@@ -1,16 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Title</title>
-</head>
-<body>
-<form method="POST">
-    {% csrf_token %}
-    {{form}}
-    <input type="submit" value="Entrar">
-</form>
+{% extends 'empresa/base.html' %}
+{% load crispy_forms_tags %}
 
+{% block conteudo %}
+    <div class="container">
+    <div style="width: 300px; margin-top: 100px; margin-left: 200px">
+        <form method="POST">
+            {% csrf_token %}
+            {{ form|crispy }}
+            <input type="submit" value="Entrar" class="btn btn-success">
+        </form>
+    </div>
+    </div>
 
-</body>
-</html>
+{% endblock conteudo %}
+
